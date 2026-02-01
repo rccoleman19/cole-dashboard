@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Testing Tool Proposal</title>
+    <style>
+        @page { margin: 0.5in; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            font-size: 11pt;
+        }
+        h1 {
+            font-size: 20pt;
+            margin: 0 0 5px 0;
+            color: #000;
+        }
+        h2 {
+            font-size: 12pt;
+            margin: 12px 0 6px 0;
+            color: #000;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 2px;
+        }
+        p {
+            margin: 0 0 8px 0;
+        }
+        ul {
+            margin: 6px 0 8px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 4px;
+        }
+        .header {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 15px;
+        }
+        .recommendation {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 12px;
+            margin-top: 12px;
+            font-weight: 600;
+            color: #155724;
+        }
+        .section {
+            margin-bottom: 10px;
+        }
+        .evidence-item {
+            margin-bottom: 6px;
+            padding-left: 10px;
+        }
+        .competitor-box {
+            background: #f8f9fa;
+            padding: 8px;
+            margin: 6px 0;
+            font-size: 10pt;
+            border-radius: 4px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 8px 0;
+        }
+        .pricing-item {
+            background: #fff3cd;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 10pt;
+        }
+        strong { color: #000; }
+        .meta {
+            font-size: 9pt;
+            color: #666;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔧 API Testing Tool (Postman Alternative)</h1>
+        <div class="meta">Opportunity Proposal • Feb 1, 2026 • Cole</div>
+    </div>
+
+    <div class="section">
+        <h2>1. The Problem</h2>
+        <p>Developers are frustrated with Postman's aggressive shift to cloud-first, subscription-based model with restrictive free tier limits. Solo developers and small teams hit paywalls quickly (25 collection runs/month, 3 users max, 1K API calls), face slow performance with large collections, and are forced into vendor lock-in with cloud sync. The problem affects millions of developers who need API testing but don't want enterprise pricing or forced cloud dependency.</p>
+    </div>
+
+    <div class="section">
+        <h2>2. Evidence of Demand</h2>
+        <ul>
+            <li class="evidence-item"><strong>Direct user complaints:</strong> "Tired of Postman's workspace limits, rising prices, slow performance" — multiple sources, Jan 2026</li>
+            <li class="evidence-item"><strong>HN validation (TODAY):</strong> Show HN: Voiden — "Every other API-testing tool has evolved into bloated, cloud-first, subscription-based service" (18 pts, 4h ago)</li>
+            <li class="evidence-item"><strong>Competitor traction:</strong> Bruno (open-source, Git-native) rapidly gaining adoption; Thunder Client has 3M+ VS Code downloads</li>
+            <li class="evidence-item"><strong>Market validation:</strong> 5+ "Postman alternatives" articles updated in Jan 2026 alone, showing active dissatisfaction</li>
+            <li class="evidence-item"><strong>Anti-vendor-lock-in sentiment:</strong> "My concern was to be trapped with $160m VC-funded company when the inevitable rug gets pulled" (re: similar tools)</li>
+            <li class="evidence-item"><strong>Pricing pain:</strong> Postman team plans: $12-49/user/month. Free tier strictly limited.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. The Solution</h2>
+        <p>Build a lightweight, offline-first, Git-native API testing tool that gives developers unlimited local usage without paywalls. Focus on speed, simplicity, and no vendor lock-in. Collections stored as plain files (JSON/YAML), sync via Git, zero cloud dependency by default. Optional paid tier adds team collaboration features (real-time sync, shared workspaces) at fair pricing.</p>
+    </div>
+
+    <div class="section">
+        <h2>4. MVP Scope</h2>
+        <ul>
+            <li>HTTP request builder (GET, POST, PUT, DELETE, PATCH, etc.)</li>
+            <li>Environment variables and secrets management</li>
+            <li>Request collections stored as JSON/YAML files</li>
+            <li>Basic JavaScript pre/post-request scripting</li>
+            <li>Response viewer (JSON, XML, HTML, headers)</li>
+            <li>Collection runner for automated testing</li>
+            <li>VS Code extension OR lightweight Electron desktop app</li>
+            <li>Git-native: collections are files, use normal Git workflows</li>
+        </ul>
+        <p><strong>What's NOT in MVP:</strong> GraphQL/WebSocket support, advanced testing frameworks, cloud sync, team features, import from Postman (v2 feature).</p>
+    </div>
+
+    <div class="section">
+        <h2>5. Build Estimate</h2>
+        <p><strong>3-5 days</strong> for functional MVP (VS Code extension path, faster than Electron).</p>
+        <ul>
+            <li>Day 1: HTTP client core, request builder UI</li>
+            <li>Day 2: Collections (YAML storage), environment variables</li>
+            <li>Day 3: Response viewer, basic scripting (eval JS snippets)</li>
+            <li>Day 4: Collection runner, polish UI/UX</li>
+            <li>Day 5: Testing, docs, publish to VS Code marketplace</li>
+        </ul>
+        <p><em>Tech stack: TypeScript, VS Code Extension API, axios/fetch for HTTP, YAML for storage.</em></p>
+    </div>
+
+    <div class="section">
+        <h2>6. Monetization</h2>
+        <p><strong>Freemium model:</strong></p>
+        <ul>
+            <li><strong>Free tier:</strong> Unlimited local usage, unlimited collections, Git-native sync (100% free forever)</li>
+            <li><strong>Pro tier ($8/user/month or $60/year):</strong> Real-time team sync (WebSocket-based), shared workspaces, encrypted secret sharing, priority support</li>
+        </ul>
+        <p><strong>Alternative:</strong> One-time license ($29-49) for lifetime access to Pro features (reduces ongoing billing complexity).</p>
+    </div>
+
+    <div class="section">
+        <h2>7. Path to $400/month</h2>
+        <div class="pricing-grid">
+            <div class="pricing-item">
+                <strong>Subscription Path:</strong><br>
+                50 Pro users @ $8/month = $400<br>
+                <em>Achievable? YES — Bruno has 20K+ GitHub stars in &lt;2 years. If we convert 0.25% of interested users → 50 paying.</em>
+            </div>
+            <div class="pricing-item">
+                <strong>One-Time License Path:</strong><br>
+                14 licenses/month @ $29 = $406<br>
+                <em>Lower friction, easier to hit early. Scale requires steady new user flow.</em>
+            </div>
+        </div>
+        <p><strong>Distribution:</strong> VS Code marketplace (built-in discovery), Product Hunt launch, dev.to/HN posts, GitHub README targeting "Postman alternative" searches.</p>
+    </div>
+
+    <div class="section">
+        <h2>8. Risks / Unknowns</h2>
+        <ul>
+            <li><strong>Crowded space:</strong> Bruno, Insomnia, Thunder Client, Testfully already exist. Differentiation: We're focused on Git-native + simplicity, avoid feature bloat.</li>
+            <li><strong>Free tier cannibalization:</strong> If free tier is too good, users won't upgrade. Mitigation: Team sync is clear value-add for small teams.</li>
+            <li><strong>Build complexity:</strong> HTTP client + scripting can get complex. Mitigation: Start minimal, use proven libraries (axios), limit scripting scope in MVP.</li>
+            <li><strong>Discovery:</strong> Getting initial users is always hard. Mitigation: Launch on Product Hunt, post to r/webdev, HN Show HN, target "frustrated Postman users" explicitly.</li>
+            <li><strong>Postman could improve:</strong> If Postman drops prices or improves free tier, market shrinks. Counter: Anti-vendor-lock-in sentiment is strong and growing.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. Competitive Landscape</h2>
+        <div class="competitor-box">
+            <strong>Bruno:</strong> Open-source, offline-first, Git-native. 20K+ stars. Free forever. No paid tier (yet). Opportunity: We can monetize better.<br>
+            <strong>Thunder Client:</strong> VS Code extension, 3M+ downloads. Lightweight but lacks Git-native workflows. $5-20/user pricing.<br>
+            <strong>Insomnia:</strong> Kong-owned, shifted to cloud-first. Users migrating away (same complaints as Postman).<br>
+            <strong>Testfully:</strong> SOC2/HIPAA compliant, targets enterprises. Different market segment.
+        </div>
+    </div>
+
+    <div class="recommendation">
+        <h2 style="border: none; margin: 0; padding: 0;">10. Recommendation</h2>
+        <p style="margin: 6px 0 0 0;"><strong>STRONG OPPORTUNITY — BUILD IT.</strong></p>
+        <p style="margin: 4px 0 0 0; font-weight: normal;">Clear pain, validated demand, proven market (competitors thriving), fast MVP build (3-5 days), viable path to $400/month. Risk is manageable. This is exactly the kind of opportunity we're looking for: developers with budget, clear frustration, willingness to pay for solutions.</p>
+    </div>
+
+</body>
+</html>
