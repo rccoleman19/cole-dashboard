@@ -1,9 +1,16 @@
 {
-  "lastUpdated": "2026-02-01T20:15:00Z",
+  "lastUpdated": "2026-02-01T20:25:00Z",
   "monthlyRevenue": 0,
   "revenueTarget": 400,
   "opportunities": {
-    "researching": [],
+    "researching": [
+      {
+        "name": "API Testing Tool (Postman Alternative)",
+        "description": "Offline-first, Git-native API testing tool for developers frustrated with Postman's pricing and limitations",
+        "lastUpdated": "2026-02-01T20:25:00Z",
+        "notes": "VERY STRONG demand signals. Multiple competitors (Bruno, Thunder Client) proving market. Pain: Postman free tier limits, slow performance, vendor lock-in. Target: Solo devs + small teams. MVP: Offline HTTP client, Git collections, basic scripting. Monetization: Freemium + team sync $5-10/user/month."
+      }
+    ],
     "proposed": [],
     "approved": [],
     "inProgress": [],
