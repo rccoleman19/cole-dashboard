@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PE Control Systems Study App - Business Proposal</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2563eb;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        h2 {
+            color: #1e40af;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #1e40af;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .highlight {
+            background: #f0f9ff;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .risk {
+            background: #fef2f2;
+            border-left: 4px solid #dc2626;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .recommendation {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 20px;
+            margin: 30px 0;
+            font-weight: 500;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .metric-box {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        .metric-label {
+            font-size: 12px;
+            color: #6b7280;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .metric-value {
+            font-size: 24px;
+            color: #1e40af;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <h1>PE Control Systems Study App</h1>
+
+    <div class="section">
+        <h2>The Problem</h2>
+        <p>Engineers preparing for the PE Control Systems exam ($350, once/year in October, 67% pass rate) lack affordable, mobile-friendly practice tools. Existing options are either expensive live courses ($1000+), desktop-only reference books ($150-300), or generic multi-discipline apps that don't focus on Control Systems specifics (measurement, control systems, final control elements, signals/networking, safety systems).</p>
+    </div>
+
+    <div class="section">
+        <h2>Evidence of Demand</h2>
+        <ul>
+            <li><strong>PE Prep Pro:</strong> Multi-discipline app with 1,400+ questions across 16 engineering disciplines (exists = proven market)</li>
+            <li><strong>PPI Control Systems materials:</strong> $150 for sample questions book (premium pricing = willingness to pay)</li>
+            <li><strong>School of PE:</strong> Live review courses at $1000+ with "high pass rates" marketing (expensive alternative)</li>
+            <li><strong>NCEES data:</strong> 67% first-time pass rate = 33% fail and retake ($350 + lost time each attempt)</li>
+            <li><strong>PrepFE (FE exam):</strong> $69.99 subscription model works for engineering exam prep</li>
+            <li><strong>Reddit/forum activity:</strong> Active discussions seeking Control Systems PE prep resources</li>
+            <li><strong>ISA (International Society of Automation):</strong> Offers PE review course (EN00) - validates professional demand</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>The Solution</h2>
+        <p>Mobile-first study app focused exclusively on PE Control Systems exam. Practice questions across all five exam domains (Measurement, Control Systems, Final Control Elements, Signals/Transmission/Networking, Safety Systems) with step-by-step solutions, performance analytics, and offline access. Think PrepFE but for PE Control Systems.</p>
+    </div>
+
+    <div class="section">
+        <h2>MVP Scope</h2>
+        <ul>
+            <li><strong>Question bank:</strong> 200+ practice questions covering all 5 exam domains</li>
+            <li><strong>Practice modes:</strong> Timed exam simulation (80 questions, 8 hours) + topic-specific practice</li>
+            <li><strong>Solutions:</strong> Step-by-step explanations with references to NCEES/ISA standards</li>
+            <li><strong>Analytics:</strong> Track performance by topic, identify weak areas</li>
+            <li><strong>Mobile + web:</strong> Responsive design, offline functionality</li>
+            <li><strong>Reference materials:</strong> Quick-access formulas and key concepts</li>
+            <li><strong>Free tier:</strong> 20 practice questions (lead generation)</li>
+            <li><strong>Paid tier:</strong> Full question bank + analytics + timed exams</li>
+        </ul>
+    </div>
+
+    <div class="highlight">
+        <h2>Build Estimate</h2>
+        <p><strong>3-4 weeks</strong> (aggressive but achievable for MVP)</p>
+        <ul>
+            <li><strong>Week 1:</strong> Question content creation (80-100 questions with solutions)</li>
+            <li><strong>Week 2:</strong> Web app frontend (question delivery, timer, analytics dashboard)</li>
+            <li><strong>Week 3:</strong> Question content completion (200+ total), mobile optimization</li>
+            <li><strong>Week 4:</strong> Testing with Ryan (taking exam), polish, launch</li>
+        </ul>
+        <p><strong>Tech stack:</strong> Next.js + Supabase (fast setup, proven for SaaS)</p>
+    </div>
+
+    <div class="section">
+        <h2>Monetization</h2>
+        <p><strong>Subscription model:</strong></p>
+        <ul>
+            <li><strong>Free tier:</strong> 20 practice questions (email capture for marketing)</li>
+            <li><strong>Monthly:</strong> $19.99/month (aligned with PrepFE $69.99 but simpler product = lower price)</li>
+            <li><strong>One-time:</strong> $49.99 lifetime access (exam is once/year, many prefer one-time payment)</li>
+        </ul>
+        <p><strong>Secondary revenue:</strong> Jedson Engineering referral pipeline</p>
+        <ul>
+            <li>Users = control systems engineers with 4+ years experience</li>
+            <li>Warm leads for Jedson recruiting</li>
+            <li>Estimated value: $5,000 per successful hire</li>
+        </ul>
+    </div>
+
+    <div class="highlight">
+        <h2>Path to $400/month</h2>
+        
+        <div class="metrics">
+            <div class="metric-box">
+                <div class="metric-label">Monthly Subscribers Needed</div>
+                <div class="metric-value">20</div>
+                <p style="margin: 5px 0 0 0; font-size: 14px;">@ $19.99/month = $400</p>
+            </div>
+            <div class="metric-box">
+                <div class="metric-label">OR Lifetime Purchases/Month</div>
+                <div class="metric-value">8</div>
+                <p style="margin: 5px 0 0 0; font-size: 14px;">@ $49.99 = $400</p>
+            </div>
+        </div>
+
+        <p><strong>Realistic assessment:</strong></p>
+        <ul>
+            <li>PE Control Systems exam: ~1,000 test-takers/year (estimate based on niche discipline)</li>
+            <li>If we capture 5% of annual market = 50 users/year</li>
+            <li>50 users × $49.99 one-time = $2,500/year = <strong>$208/month average</strong></li>
+            <li>Need 2-3 exam cycles (2-3 years) to hit $400/month consistently</li>
+        </ul>
+
+        <p><strong>Secondary (Jedson referrals):</strong></p>
+        <ul>
+            <li>1 successful hire/year from user base = $5,000 bonus</li>
+            <li>Combined: $208/month subscriptions + $417/month (amortized referral) = <strong>$625/month</strong></li>
+        </ul>
+
+        <p><strong>Confidence level:</strong> Medium. Market is small but underserved. Dual revenue streams help.</p>
+    </div>
+
+    <div class="risk">
+        <h2>Risks/Unknowns</h2>
+        <ol>
+            <li><strong>Small market size:</strong> PE Control Systems is niche (~1,000 test-takers/year vs 40,000+ for FE)</li>
+            <li><strong>Content quality bar:</strong> Questions must match NCEES difficulty/style or users will complain</li>
+            <li><strong>Ryan's exam timing:</strong> If he takes exam before MVP ready, we lose our perfect beta tester</li>
+            <li><strong>Competition:</strong> PE Prep Pro already covers Control Systems (but not specialized)</li>
+            <li><strong>One-time payment preference:</strong> If most users choose $49.99 lifetime vs monthly, revenue is lumpy</li>
+            <li><strong>Jedson referral conversion:</strong> Unproven - do study app users actually want recruiting contacts?</li>
+        </ol>
+    </div>
+
+    <div class="recommendation">
+        <h2>Recommendation: Worth Exploring (with caveats)</h2>
+        
+        <p><strong>Pros:</strong></p>
+        <ul>
+            <li>Ryan is perfect target user + tester</li>
+            <li>Dual revenue streams (subs + referrals)</li>
+            <li>Underserved niche with proven willingness to pay</li>
+            <li>3-4 week build timeline = fast validation</li>
+        </ul>
+
+        <p><strong>Cons:</strong></p>
+        <ul>
+            <li>Small market caps revenue potential (~$200-600/month max)</li>
+            <li>Content creation is time-intensive (200+ quality questions with solutions)</li>
+            <li>Won't hit $400/month goal reliably for 1-2 years</li>
+        </ul>
+
+        <p><strong>Strategic value beyond revenue:</strong></p>
+        <ul>
+            <li>Portfolio piece (working SaaS product)</li>
+            <li>Learning opportunity (Next.js, Supabase, subscription payments)</li>
+            <li>Real user feedback from Ryan</li>
+            <li>Jedson relationship building</li>
+        </ul>
+
+        <p><strong>Suggested approach:</strong></p>
+        <ol>
+            <li>Build lean MVP (100 questions instead of 200)</li>
+            <li>Test with Ryan as he studies</li>
+            <li>Launch at $29.99 one-time (lower friction than subscription)</li>
+            <li>Validate demand with 10-20 paying users</li>
+            <li>If traction is weak, pivot to larger market (FE exam) or different opportunity</li>
+        </ol>
+
+        <p><strong>Bottom line:</strong> Good first product to build skills and prove you can ship, but unlikely to be the solo path to $400/month. Consider it a stepping stone, not the final answer.</p>
+    </div>
+
+</body>
+</html>

@@ -1,90 +1,30 @@
-# Cole's Opportunity Dashboard
+# Cole's Projects
 
-**Live Dashboard:** [View Here](https://rccoleman19.github.io/cole-dashboard/) *(once deployed)*
+AI assistant building revenue-generating products.
 
-AI-powered revenue opportunity tracker. This dashboard shows all business opportunities being researched, proposed, built, and launched.
+**Goal:** $400/month revenue to cover operating costs.
 
----
+## Active Projects
 
-## 🎯 Mission
+### 📚 [PE Control Systems Study App](./projects/pe-study-app/)
+**Status:** 🏗️ Building (Approved Feb 2, 2026)
 
-**Revenue Target:** $400/month (breakeven) → then grow beyond
+Exam prep app for PE Control Systems certification. Mobile-first web app with practice questions, analytics, and offline support.
 
-Cole is an AI agent focused on finding expensive problems people pay to solve, building solutions, and generating revenue.
+- **Revenue Model:** $19.99/mo or $49.99 lifetime + Jedson Engineering referral fees
+- **Target:** $200-600/month
+- **Build Time:** 3-4 weeks
+- **[Proposal](./proposals/pe-controls-study-app.pdf)**
 
----
+## Pending Proposals
 
-## 📊 Dashboard Stages
+- **API Testing Tool** - Awaiting decision
+- **Agent Security Runtime** - Research in progress
 
-- **🔍 Researching** - Gathering info, validating demand
-- **📋 Proposed** - Full proposal submitted, awaiting decision
-- **✅ Approved** - Greenlit, ready to build
-- **🔨 In Progress** - Actively being built
-- **🚀 Live** - Launched and running
-- **❌ Rejected/Parked** - Shelved for reference
+## Archive
 
----
-
-## 🛠️ How It Works
-
-Opportunities are tracked in `opportunities.json`:
-
-```json
-{
-  "lastUpdated": "2026-02-01T20:15:00Z",
-  "monthlyRevenue": 0,
-  "revenueTarget": 400,
-  "opportunities": {
-    "researching": [
-      {
-        "name": "Example Opportunity",
-        "description": "One-line description",
-        "lastUpdated": "2026-02-01T20:15:00Z",
-        "notes": "Optional notes"
-      }
-    ],
-    "live": [
-      {
-        "name": "Live Product",
-        "description": "Description",
-        "lastUpdated": "2026-02-01T20:15:00Z",
-        "revenue": 150,
-        "revenueTarget": 200
-      }
-    ]
-  }
-}
-```
-
-Run `node update-dashboard.js` to regenerate the HTML.
+All proposal PDFs are stored in [`/proposals`](./proposals/).
 
 ---
 
-## 📁 Files
-
-- `index.html` - The dashboard (auto-generated)
-- `opportunities.json` - Data source
-- `update-dashboard.js` - Dashboard generator
-- `DASHBOARD_SPEC.md` - Dashboard requirements
-- `PROPOSAL_TEMPLATE.md` - Format for opportunity proposals
-
----
-
-## 🤖 About Cole
-
-Cole is an AI revenue agent running on OpenClaw, focused on finding and building profitable opportunities in the B2B SaaS, developer tools, and automation space.
-
-**Focus Areas:**
-- Software/digital products only
-- B2B micro-SaaS
-- Developer tools
-- Automation products
-
-**Constraints:**
-- No regulated industries (healthcare/finance/legal)
-- Stay legal and ethical
-- No ToS violations
-
----
-
-**Last Updated:** Feb 1, 2026
+**Last Updated:** February 2, 2026

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "meas-001",
+    "domain": "measurement",
+    "difficulty": "easy",
+    "question": "What is the primary advantage of using a 4-20 mA current loop over a 0-10 V voltage signal for industrial instrumentation?",
+    "options": {
+      "A": "Lower power consumption",
+      "B": "Immunity to voltage drops in long cable runs",
+      "C": "Simpler wiring requirements",
+      "D": "Higher signal resolution"
+    },
+    "correctAnswer": "B",
+    "explanation": "4-20 mA current loops are preferred because current remains constant along the wire regardless of cable resistance or voltage drops. This makes them ideal for long cable runs in industrial environments where significant distances exist between sensors and control rooms.",
+    "references": ["ISA-50.00.01", "ANSI/ISA-5.1"],
+    "tags": ["current-loop", "signal-transmission", "instrumentation"]
+  },
+  {
+    "id": "meas-002",
+    "domain": "measurement",
+    "difficulty": "medium",
+    "question": "A pressure transmitter has a calibrated range of 0-100 psi and outputs 4-20 mA. If the transmitter reads 65 psi, what is the expected output current?",
+    "options": {
+      "A": "12.4 mA",
+      "B": "13.6 mA",
+      "C": "14.4 mA",
+      "D": "15.2 mA"
+    },
+    "correctAnswer": "C",
+    "explanation": "Using the formula: Output = 4 + (16 × (Reading/Span)). Output = 4 + (16 × (65/100)) = 4 + 10.4 = 14.4 mA. The span is 16 mA (20-4), and 65 psi is 65% of the 100 psi range.",
+    "references": ["ISA-51.1"],
+    "tags": ["transmitter-calibration", "current-loop", "calculation"]
+  },
+  {
+    "id": "ctrl-001",
+    "domain": "control-systems",
+    "difficulty": "easy",
+    "question": "In a PID controller, which term is responsible for eliminating steady-state error?",
+    "options": {
+      "A": "Proportional (P)",
+      "B": "Integral (I)",
+      "C": "Derivative (D)",
+      "D": "All three equally"
+    },
+    "correctAnswer": "B",
+    "explanation": "The Integral (I) term accumulates error over time and continues to adjust the output until the error reaches zero, thereby eliminating steady-state error. The P term reduces error but cannot eliminate it completely, and the D term responds to rate of change.",
+    "references": ["ISA-51.1-1979"],
+    "tags": ["pid-control", "steady-state-error", "control-theory"]
+  },
+  {
+    "id": "ctrl-002",
+    "domain": "control-systems",
+    "difficulty": "medium",
+    "question": "A control system has a transfer function G(s) = 10/(s+2). What is the system's DC gain?",
+    "options": {
+      "A": "2",
+      "B": "5",
+      "C": "10",
+      "D": "12"
+    },
+    "correctAnswer": "B",
+    "explanation": "The DC gain is found by evaluating G(s) at s=0: G(0) = 10/(0+2) = 10/2 = 5. This represents the steady-state gain of the system for a constant input.",
+    "references": ["Control Systems Engineering textbook"],
+    "tags": ["transfer-function", "dc-gain", "laplace-transform"]
+  },
+  {
+    "id": "ctrl-003",
+    "domain": "control-systems",
+    "difficulty": "hard",
+    "question": "A feedback control loop has a loop gain of 0.8 at the phase crossover frequency. What is the gain margin in dB?",
+    "options": {
+      "A": "0.97 dB",
+      "B": "1.94 dB",
+      "C": "2.50 dB",
+      "D": "3.52 dB"
+    },
+    "correctAnswer": "B",
+    "explanation": "Gain margin in dB = 20×log₁₀(1/|G|) where |G| is the loop gain at phase crossover. GM = 20×log₁₀(1/0.8) = 20×log₁₀(1.25) = 20×0.097 = 1.94 dB. A gain margin greater than 0 dB indicates stability.",
+    "references": ["ISA-51.1-1979", "Control System Design textbooks"],
+    "tags": ["stability-analysis", "gain-margin", "frequency-response"]
+  },
+  {
+    "id": "fce-001",
+    "domain": "final-control",
+    "difficulty": "easy",
+    "question": "What is the typical fail-safe position for a control valve in a cooling water system?",
+    "options": {
+      "A": "Fail-open (FO)",
+      "B": "Fail-closed (FC)",
+      "C": "Fail-in-place (FIP)",
+      "D": "Depends on the process requirements"
+    },
+    "correctAnswer": "D",
+    "explanation": "The fail-safe position depends entirely on the process safety requirements. For example, in a reactor cooling system, you'd want fail-open to maximize cooling if air supply is lost. In a heating system, you might want fail-closed. Always analyze the safest state for the specific process.",
+    "references": ["ISA-75.01.01", "ISA-84.00.01"],
+    "tags": ["valve-sizing", "fail-safe", "process-safety"]
+  },
+  {
+    "id": "sig-001",
+    "domain": "signals-networking",
+    "difficulty": "medium",
+    "question": "What is the maximum cable length for a FOUNDATION Fieldbus H1 segment operating at 31.25 kbit/s?",
+    "options": {
+      "A": "500 meters",
+      "B": "1000 meters",
+      "C": "1900 meters",
+      "D": "3000 meters"
+    },
+    "correctAnswer": "C",
+    "explanation": "FOUNDATION Fieldbus H1 has a maximum segment length of 1900 meters (6234 feet) when using twisted-pair cable. This can be extended using repeaters. The 31.25 kbit/s bus speed is designed for process control applications.",
+    "references": ["IEC 61158-2", "FOUNDATION Fieldbus specifications"],
+    "tags": ["fieldbus", "networking", "cable-length"]
+  },
+  {
+    "id": "safe-001",
+    "domain": "safety-systems",
+    "difficulty": "medium",
+    "question": "According to IEC 61511, what is the minimum Safety Integrity Level (SIL) required for a safety instrumented function with a target risk reduction factor of 500?",
+    "options": {
+      "A": "SIL 1",
+      "B": "SIL 2",
+      "C": "SIL 3",
+      "D": "SIL 4"
+    },
+    "correctAnswer": "C",
+    "explanation": "SIL 3 requires a risk reduction factor (RRF) between 100 and 1000 (PFDavg of 10⁻³ to 10⁻⁴). An RRF of 500 falls within this range. SIL 1: 10-100, SIL 2: 100-1000, SIL 3: 1000-10000, SIL 4: >10000.",
+    "references": ["IEC 61511", "ISA-84.00.01"],
+    "tags": ["functional-safety", "sil", "risk-reduction"]
+  }
+]
